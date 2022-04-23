@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.benym.concurrentregister.mapper.RUserMapper">
+
+    <resultMap id="BaseResultMap" type="com.benym.concurrentregister.domain.UserDO">
+            <id property="id" column="id" jdbcType="BIGINT"/>
+            <result property="account" column="user_account" jdbcType="VARCHAR"/>
+            <result property="telePhone" column="user_telephone" jdbcType="VARCHAR"/>
+            <result property="passWord" column="pass_word" jdbcType="VARCHAR"/>
+            <result property="createTime" column="create_time" jdbcType="TIMESTAMP"/>
+            <result property="updateTime" column="update_time" jdbcType="TIMESTAMP"/>
+    </resultMap>
+
+    <sql id="Base_Column_List">
+        id,user_account,user_telephone,
+        pass_word,create_time,update_time
+    </sql>
+</mapper>
